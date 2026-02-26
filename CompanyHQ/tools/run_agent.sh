@@ -20,7 +20,10 @@ ts="$(date +%Y%m%d-%H%M%S)"
 log="$ROOT_DIR/logs/${ts}-${agent,,}.log"
 entry_file="$ROOT_DIR/taskboard/in-progress.md"
 
-profile="$ROOT_DIR/agents/${agent}.md"
+profile="$ROOT_DIR/agents/${agent}/README.md"
+if [[ ! -f "$profile" ]]; then
+  profile="$ROOT_DIR/agents/${agent}.md"
+fi
 if [[ ! -f "$profile" ]]; then
   echo "Unknown agent: $agent"
   exit 2

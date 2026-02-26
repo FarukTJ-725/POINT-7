@@ -43,9 +43,26 @@ $EDITOR config/point7.local.env
 
 ## Agent packs and operating model
 
-- Agent packs are in `agents/*.md`.
+- Agent packs are in `agents/<AgentName>/...` with compatibility stubs in `agents/*.md`.
 - Shared specification: `agents/AGENTIC_GUIDELINES.md`.
 - Pipeline orchestration: Architect → (ReactEngineer and/or UnityEngineer) → QA → DocsPM → DevOps → Human approval gate.
+
+## Agent folder structure
+
+Each agent now has a dedicated folder pack:
+
+```
+agents/<AgentName>/
+  README.md
+  skills/
+  rules/
+  workflow/
+  plugins/
+  templates/
+  handoff/
+```
+
+This keeps skills/rules/workflows/plugins/templates organized and scalable per role.
 
 ## Add projects safely
 
