@@ -1,0 +1,19 @@
+{
+  "profile": "point7-openai-codex",
+  "description": "Primary OpenClaw example using OpenAI Codex provider",
+  "provider": "openai-codex",
+  "models": {
+    "planning": "gpt-5-codex",
+    "execution": "gpt-5-codex"
+  },
+  "fallbacks": [
+    {
+      "provider": "openrouter",
+      "model": "openai/gpt-4.1-mini"
+    },
+    {
+      "provider": "ollama",
+      "model": "llama3.1"
+    }
+  ]
+}
