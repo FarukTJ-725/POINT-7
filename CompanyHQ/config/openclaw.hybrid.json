@@ -1,0 +1,26 @@
+{
+  "profile": "point7-hybrid",
+  "description": "Hybrid routing with openai-codex primary and openrouter/ollama alternatives",
+  "routes": [
+    {
+      "taskType": "architecture",
+      "provider": "openai-codex",
+      "model": "gpt-5-codex"
+    },
+    {
+      "taskType": "frontend",
+      "provider": "openrouter",
+      "model": "anthropic/claude-3.5-sonnet"
+    },
+    {
+      "taskType": "gameplay",
+      "provider": "ollama",
+      "model": "llama3.1"
+    }
+  ],
+  "providers": {
+    "openai-codex": "OPENAI_API_KEY",
+    "openrouter": "OPENROUTER_API_KEY",
+    "ollama": "OLLAMA_BASE_URL"
+  }
+}
