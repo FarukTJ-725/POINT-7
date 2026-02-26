@@ -1,0 +1,16 @@
+# Environment
+config/point7.local.env
+.env
+
+# Node/JS
+node_modules/
+.npm/
+
+# Logs and temp
+logs/*.log
+*.tmp
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
