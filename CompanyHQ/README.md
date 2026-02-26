@@ -6,6 +6,7 @@ POINT7 CompanyHQ is a lightweight “company operating system” for running coo
 
 POINT7 gives you:
 - 6 role-specific agents + 1 human operator profile.
+- Fully loaded agent packs (skills, rules, workflows, plugins, script macros, templates, DoD).
 - Workspace boundaries for React and Unity streams.
 - A taskboard workflow (`backlog -> in-progress -> done`).
 - Practical playbooks for standards, security, incidents, and delivery.
@@ -15,7 +16,7 @@ POINT7 gives you:
 
 - `bootstrap/`: setup, validation, diagnostics.
 - `config/`: env templates, OpenClaw examples, model routing.
-- `agents/`: profile cards used by runner scripts.
+- `agents/`: agent packs + agentic markdown guidelines.
 - `playbooks/`: execution rules and operating policy.
 - `taskboard/`: markdown Kanban with templates.
 - `tools/`: local orchestration scripts.
@@ -39,6 +40,12 @@ $EDITOR config/point7.local.env
 ```
 
 `config/point7.local.env` is ignored by git. Keep secrets only in environment files or shell session.
+
+## Agent packs and operating model
+
+- Agent packs are in `agents/*.md`.
+- Shared specification: `agents/AGENTIC_GUIDELINES.md`.
+- Pipeline orchestration: Architect → (ReactEngineer and/or UnityEngineer) → QA → DocsPM → DevOps → Human approval gate.
 
 ## Add projects safely
 
